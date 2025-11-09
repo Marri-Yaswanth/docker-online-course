@@ -23,7 +23,7 @@
         </a>
 
         <ul class="navbar">
-            <li><a href="#Home">Hi</a></li>
+            <li><a href="#Home">Home</a></li>
             <li><a href="#Categories">categories</a></li>
             <li><a href="#Courses">Courses</a></li>
             <li><a href="#About">About</a></li>
@@ -31,9 +31,9 @@
         </ul>
 
         <div class="header-icons">
-            <a href="#"><i class='bx bx-user'></i></a>
-            <a href="#"><i class='bx bx-heart' ></i></a>
-            <a href="#"><i class='bx bx-cart' ></i></a>
+            <a href="login.html" title="Login / My Account"><i class='bx bx-user'></i></a>
+            <a href="#" title="My Wishlist" onclick="showWishlist(); return false;"><i class='bx bx-heart' ></i></a>
+            <a href="#" title="Shopping Cart" onclick="showCart(); return false;"><i class='bx bx-cart' ></i></a>
             <div class="bx bx-menu" id="menu-icon"></div>
         </div>
     </header>
@@ -46,10 +46,11 @@
             <p>Explore Your Universe of Learning with StudyVerse</p>
             <br>
             <div class="latter">
-                <form>
-                    <input type="email" placeholder="Write Your Email" required>
-                    <input type="submit" value="Let's Start" required>
+                <form id="newsletterForm">
+                    <input type="email" id="newsletterEmail" placeholder="Enter your email address" required>
+                    <input type="submit" value="Get Started" required>
                 </form>
+                <p id="newsletterMessage" style="margin-top: 10px; color: var(--main-color); display: none;"></p>
             </div>
         </div>
         <div class="home-img">
@@ -63,7 +64,7 @@
                 <img src="icons8-graduate-48.png">
             </div>
             <div class="container-text">
-                <h4>5k</h4>
+                <h4>2,500+</h4>
                 <p>Online Courses</p>
             </div>
         </div>
@@ -73,8 +74,8 @@
                 <img src="icons8-graduate-48.png">
             </div>
             <div class="container-text">
-                <h4>5k</h4>
-                <p>Online Courses</p>
+                <h4>50,000+</h4>
+                <p>Active Students</p>
             </div>
         </div>
 
@@ -83,8 +84,8 @@
                 <img src="icons8-graduate-48.png">
             </div>
             <div class="container-text">
-                <h4>5k</h4>
-                <p>Online Courses</p>
+                <h4>500+</h4>
+                <p>Expert Instructors</p>
             </div>
         </div>
     
@@ -94,8 +95,8 @@
                 <img src="icons8-graduate-48.png">
             </div>
             <div class="container-text">
-                <h4>5k</h4>
-                <p>Online Courses</p>
+                <h4>98%</h4>
+                <p>Success Rate</p>
             </div>
         </div>
 
@@ -112,32 +113,32 @@
 
             <div class="box">
                 <img src="course 1.jpeg">
-                <h3>Angular Developement</h3>
-                <p>5 courses</p>
+                <h3>Web Development</h3>
+                <p>12 courses</p>
             </div>
 
             <div class="box">
                 <img src="course 2.jpeg">
-                <h3>Angular Developement</h3>
-                <p>5 courses</p>
+                <h3>Data Science & AI</h3>
+                <p>8 courses</p>
             </div>
 
             <div class="box">
                 <img src="course 3.jpeg">
-                <h3>Angular Developement</h3>
-                <p>5 courses</p>
+                <h3>Mobile Development</h3>
+                <p>6 courses</p>
             </div>
 
             <div class="box">
                 <img src="course 4.jpeg">
-                <h3>Angular Developement</h3>
-                <p>5 courses</p>
+                <h3>Cloud & DevOps</h3>
+                <p>10 courses</p>
             </div>
 
         </div>
 
         <div class="main-btn">
-            <a href="#" class="btn">All Categories</a>
+            <a href="#Courses" class="btn">View All Categories</a>
         </div>
         
     </section>
@@ -158,9 +159,9 @@
                     </a>
                 </div>
                 <div class="courses-text">
-                    <h5>₹10.0</h5>
-                    <h3>The Complete HTML CSS JS Courses 2022</h3>
-                    <h6>05 hours 15 minutes</h6>
+                    <h5>₹999</h5>
+                    <h3>HTML & CSS - Complete Web Development Bootcamp</h3>
+                    <h6>12 hours 30 minutes</h6>
                     <div class="rating">
                         <div class="star">
                             <a href="#"><i class='bx bxs-star' ></i></a>
@@ -170,8 +171,14 @@
                             <a href="#"><i class='bx bxs-star' ></i></a>
                         </div>
                         <div class="review">
-                            <p>{5 Reviews}</p>
+                            <p>(2,847 Reviews)</p>
                         </div>
+                    </div>
+                    <div class="course-actions">
+                        <a href="login.html" class="enroll-btn">Enroll Now</a>
+                        <button class="wishlist-btn" onclick="addToWishlist('HTML & CSS Bootcamp'); return false;" title="Add to Wishlist">
+                            <i class='bx bx-heart'></i>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -184,9 +191,9 @@
                     </a>
                 </div>
                 <div class="courses-text">
-                    <h5>₹10.0</h5>
-                    <h3>The Complete HTML CSS JS Courses 2022</h3>
-                    <h6>05 hours 15 minutes</h6>
+                    <h5>₹1,299</h5>
+                    <h3>Advanced CSS & Sass: Modern Responsive Design</h3>
+                    <h6>18 hours 45 minutes</h6>
                     <div class="rating">
                         <div class="star">
                             <a href="#"><i class='bx bxs-star' ></i></a>
@@ -196,7 +203,7 @@
                             <a href="#"><i class='bx bxs-star' ></i></a>
                         </div>
                         <div class="review">
-                            <p>{5 Reviews}</p>
+                            <p>(1,956 Reviews)</p>
                         </div>
                     </div>
                 </div>
@@ -210,9 +217,9 @@
                     </a>
                 </div>
                 <div class="courses-text">
-                    <h5>₹10.0</h5>
-                    <h3>The Complete HTML CSS JS Courses 2022</h3>
-                    <h6>05 hours 15 minutes</h6>
+                    <h5>₹1,499</h5>
+                    <h3>JavaScript - The Complete Guide (Beginner to Advanced)</h3>
+                    <h6>24 hours 20 minutes</h6>
                     <div class="rating">
                         <div class="star">
                             <a href="#"><i class='bx bxs-star' ></i></a>
@@ -222,7 +229,7 @@
                             <a href="#"><i class='bx bxs-star' ></i></a>
                         </div>
                         <div class="review">
-                            <p>{5 Reviews}</p>
+                            <p>(3,542 Reviews)</p>
                         </div>
                     </div>
                 </div>
@@ -236,9 +243,9 @@
                     </a>
                 </div>
                 <div class="courses-text">
-                    <h5>₹10.0</h5>
-                    <h3>The Complete HTML CSS JS Courses 2022</h3>
-                    <h6>05 hours 15 minutes</h6>
+                    <h5>₹1,799</h5>
+                    <h3>Python for Data Science & Machine Learning Bootcamp</h3>
+                    <h6>32 hours 15 minutes</h6>
                     <div class="rating">
                         <div class="star">
                             <a href="#"><i class='bx bxs-star' ></i></a>
@@ -248,7 +255,7 @@
                             <a href="#"><i class='bx bxs-star' ></i></a>
                         </div>
                         <div class="review">
-                            <p>{5 Reviews}</p>
+                            <p>(4,128 Reviews)</p>
                         </div>
                     </div>
                 </div>
@@ -262,9 +269,9 @@
                     </a>
                 </div>
                 <div class="courses-text">
-                    <h5>₹10.0</h5>
-                    <h3>The Complete HTML CSS JS Courses 2022</h3>
-                    <h6>05 hours 15 minutes</h6>
+                    <h5>₹1,599</h5>
+                    <h3>React - The Complete Guide (React Router & Redux)</h3>
+                    <h6>28 hours 40 minutes</h6>
                     <div class="rating">
                         <div class="star">
                             <a href="#"><i class='bx bxs-star' ></i></a>
@@ -274,7 +281,7 @@
                             <a href="#"><i class='bx bxs-star' ></i></a>
                         </div>
                         <div class="review">
-                            <p>{5 Reviews}</p>
+                            <p>(5,234 Reviews)</p>
                         </div>
                     </div>
                 </div>
@@ -288,9 +295,9 @@
                     </a>
                 </div>
                 <div class="courses-text">
-                    <h5>₹10.0</h5>
-                    <h3>The Complete HTML CSS JS Courses 2022</h3>
-                    <h6>05 hours 15 minutes</h6>
+                    <h5>₹2,199</h5>
+                    <h3>Full Stack Web Development with Node.js & MongoDB</h3>
+                    <h6>36 hours 50 minutes</h6>
                     <div class="rating">
                         <div class="star">
                             <a href="#"><i class='bx bxs-star' ></i></a>
@@ -300,7 +307,7 @@
                             <a href="#"><i class='bx bxs-star' ></i></a>
                         </div>
                         <div class="review">
-                            <p>{5 Reviews}</p>
+                            <p>(3,867 Reviews)</p>
                         </div>
                     </div>
                 </div>
@@ -309,7 +316,7 @@
         </div>
 
         <div class="main-btn">
-            <a href="#" class="btn">Buy Now</a>
+            <a href="login.html" class="btn">Enroll Now</a>
         </div>
 
     </section>
@@ -355,11 +362,12 @@
             <img src="pixlr-image-generator-692247df-da86-4cd2-94ab-e1b0b463cec0.png">
         </div>
         <div class="about-text">
-            <h2>Want to share your knowledge? Join us a Mentor</h2>
-            <p>High-definition video is video of higher resolution and quality than standard-definition. While there is no standardized meaning for high-definition,generally any video.</p>
-            <h4>Best Courses</h4>
-            <h5>Top rated Instructor</h5>
-            <a href="#" class="btn">Read More</a>
+            <h2>Want to share your knowledge? Join us as a Mentor</h2>
+            <p>Become part of our expert instructor community and help thousands of students achieve their learning goals. Share your expertise through high-quality video courses and earn while making an impact in the education technology space.</p>
+            <h4>✓ Create Engaging Courses</h4>
+            <h5>✓ Earn Revenue Share</h5>
+            <h5>✓ Reach Global Audience</h5>
+            <a href="login.html" class="btn">Apply as Instructor</a>
 
         </div>
     </section>
@@ -368,37 +376,42 @@
         <div class="main-contact">
             <div class="contact-content">
                 <img src="studyverse-high-resolution-logo (1).svg">
-                <li><a href="#">Facebook</a></li>
-                <li><a href="#">Instagram</a></li>
-                <li><a href="#">Twitter</a></li>
+                <li><a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a></li>
+                <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+                <li><a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a></li>
+                <li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
             </div>
 
             <div class="contact-content">
+                <h4 style="margin-bottom: 15px; color: var(--text-color);">Quick Links</h4>
                 <li><a href="#Home">Home</a></li>
                 <li><a href="#Categories">Categories</a></li>
                 <li><a href="#Courses">Courses</a></li>
-                <li><a href="#About Us">About Us</a></li>
-                <li><a href="#Contact Us">Contact US</a></li>
+                <li><a href="#About">About Us</a></li>
+                <li><a href="#Contact">Contact US</a></li>
             </div>
 
             <div class="contact-content">
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">Login</a></li>
-                <li><a href="#">Register</a></li>
-                <li><a href="#">Instructor</a></li>
-                <li><a href="#">Dashboard</a></li>
+                <h4 style="margin-bottom: 15px; color: var(--text-color);">My Account</h4>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="login.html">Register</a></li>
+                <li><a href="login.html">My Courses</a></li>
+                <li><a href="login.html">Become Instructor</a></li>
+                <li><a href="admin-dashboard.html">Dashboard</a></li>
             </div>
 
             <div class="contact-content">
-                <li><a href="#">San Francisco,<br>California, CA 94108</a></li>
-                <li><a href="#">Dreamslm@example.com</a></li>
-                <li><a href="#">1234567890</a></li>
+                <h4 style="margin-bottom: 15px; color: var(--text-color);">Contact Info</h4>
+                <li><a href="https://maps.google.com" target="_blank">📍 Mumbai, Maharashtra<br>India - 400001</a></li>
+                <li><a href="mailto:support@studyverse.com">📧 support@studyverse.com</a></li>
+                <li><a href="tel:+919876543210">📞 +91 98765 43210</a></li>
+                <li><a href="mailto:careers@studyverse.com">💼 careers@studyverse.com</a></li>
             </div>
 
         </div>
     </section>
     <div class="last-text">
-        <p>© 2024 Marri Venkata Siva Naga Yaswanth. All rights reserved.</p>
+        <p>© 2025 Marri Venkata Siva Naga Yaswanth. All rights reserved. | <a href="#" style="color: var(--main-color);">Privacy Policy</a> | <a href="#" style="color: var(--main-color);">Terms of Service</a></p>
     </div>
 
     <!-- Video Modal -->
